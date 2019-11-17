@@ -1,7 +1,6 @@
 package sample;
 
 import javafx.scene.input.MouseEvent;
-import javafx.scene.canvas.Canvas;
 
 /**
  * Interface for a paint tool.

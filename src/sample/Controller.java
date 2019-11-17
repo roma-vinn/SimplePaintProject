@@ -24,6 +24,10 @@ public class Controller implements Initializable {
     private final static int CANVAS_HEIGHT = 570;
 
     private final PaintTools.BrushTool brushTool = new PaintTools.BrushTool();
+    private final PaintTools.RectangleTool rectangleTool = new PaintTools.RectangleTool();
+    private final PaintTools.EllipseTool ellipseTool = new PaintTools.EllipseTool();
+
+
 
     @FXML
     private Canvas canvas;
@@ -36,26 +40,19 @@ public class Controller implements Initializable {
 
     GraphicsContext GCTool;
 
+    // temporary choose this as main tool
     private PaintTool selectedTool = brushTool;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         GCTool = canvas.getGraphicsContext2D();
 
-        canvas.setOnMousePressed(event -> {
-            selectedTool.onMousePressed(event, this);
-//            GCTool.beginPath();
-//            GCTool.moveTo(event.getX(), event.getY());
-//            GCTool.setStroke(colorPicker.getValue());
-//            GCTool.stroke();
-        });
+        canvas.setOnMousePressed(event -> selectedTool.onMousePressed(event, this));
 
-        canvas.setOnMouseDragged(event -> {
-            selectedTool.onMouseDragged(event, this);
-//            GCTool.lineTo(event.getX(), event.getY());
-//            GCTool.setStroke(colorPicker.getValue());
-//            GCTool.stroke();
-        });
+        canvas.setOnMouseDragged(event -> selectedTool.onMouseDragged(event, this));
+
+        canvas.setOnMouseReleased(event -> selectedTool.onMouseReleased(event, this));
+
 
         sizeSlider.valueProperty().addListener((observable, oldValue, newValue) -> {
             sizeSlider.setValue(newValue.intValue());
