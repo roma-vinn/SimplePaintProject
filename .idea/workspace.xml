@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Updated README.md file" />
+    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="Added quitRequest handler">
+      <change afterPath="$PROJECT_DIR$/img/editMenu.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/example.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/fileMenu.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimplePaintProject/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimplePaintProject/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SimplePaintProject/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/SimplePaintProject/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Controller.java" afterDir="false" />
+    </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -59,7 +68,33 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#903#904#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="475">
+                <caret line="25" column="65" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="65" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,6 +147,11 @@
             <path>
               <item name="SimplePaintProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="SimplePaintProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SimplePaintProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SimplePaintProject" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SimplePaintProject" type="b2602c69:ProjectViewProjectNode" />
@@ -249,7 +289,7 @@
       <updated>1359379246138</updated>
       <workItem from="1359379250712" duration="1302000" />
       <workItem from="1573984198274" duration="8052000" />
-      <workItem from="1574006974838" duration="14857000" />
+      <workItem from="1574006974838" duration="14482000" />
     </task>
     <task id="LOCAL-00001" summary="Added rectangleTool and ellipseTool">
       <created>1574011779860</created>
@@ -286,21 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1574020791513</updated>
     </task>
-    <task id="LOCAL-00006" summary="Updated README.md file">
-      <created>1574022970176</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1574022970176</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24211000" />
+    <option name="totallyTimeSpent" value="23836000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-480" y="-1080" width="1920" height="1080" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.209375" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -350,8 +384,7 @@
     <MESSAGE value="Updated GUI support for rectangleTool and ellipseTool (&quot;is filled&quot; property)." />
     <MESSAGE value="Added &quot;Close&quot; MenuItem handler" />
     <MESSAGE value="Added quitRequest handler" />
-    <MESSAGE value="Updated README.md file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated README.md file" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added quitRequest handler" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -438,22 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/img/example.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/img/closingConfirmation.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="551">
-            <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sample/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="608">
@@ -462,6 +479,19 @@
             <element signature="imports" expanded="true" />
             <element signature="e#903#904#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/img/example.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="475">
+            <caret line="25" column="65" selection-start-line="25" selection-start-column="24" selection-end-line="25" selection-end-column="65" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
