@@ -117,7 +117,6 @@ public class Controller implements Initializable {
         fileChooser.getExtensionFilters().add(extFilter);
 
         InputStream file = new FileInputStream(fileChooser.showOpenDialog(Main.window));
-//        File file = fileChooser.showOpenDialog(Main.window);
 
         try {
             Image img = new Image(file);
