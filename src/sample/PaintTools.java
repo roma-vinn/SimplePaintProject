@@ -63,8 +63,14 @@ class PaintTools {
             width = Math.abs(x_start - x_finish);
             height = Math.abs(y_start - y_finish);
 
-            controller.GCTool.setFill(controller.getColorPicker().getValue());
-            controller.GCTool.fillRect(x, y, width, height);
+            if (controller.isFilled.isSelected()) {
+                controller.GCTool.setFill(controller.getColorPicker().getValue());
+                controller.GCTool.fillRect(x, y, width, height);
+            } else {
+                controller.GCTool.setStroke(controller.getColorPicker().getValue());
+                controller.GCTool.strokeRect(x, y, width, height);
+            }
+
         }
     }
 
@@ -96,9 +102,13 @@ class PaintTools {
 
             width = Math.abs(x_start - x_finish);
             height = Math.abs(y_start - y_finish);
-
-            controller.GCTool.setFill(controller.getColorPicker().getValue());
-            controller.GCTool.fillOval(x, y, width, height);
+            if (controller.isFilled.isSelected()) {
+                controller.GCTool.setFill(controller.getColorPicker().getValue());
+                controller.GCTool.fillOval(x, y, width, height);
+            } else {
+                controller.GCTool.setStroke(controller.getColorPicker().getValue());
+                controller.GCTool.strokeOval(x, y, width, height);
+            }
         }
     }
 

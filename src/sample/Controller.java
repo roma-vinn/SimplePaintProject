@@ -8,6 +8,7 @@ import javafx.scene.canvas.GraphicsContext;
 import java.io.*;
 import javax.imageio.ImageIO;
 
+import javafx.scene.control.CheckBox;
 import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
 import javafx.scene.image.WritableImage;
@@ -27,21 +28,30 @@ public class Controller implements Initializable {
     private final PaintTools.RectangleTool rectangleTool = new PaintTools.RectangleTool();
     private final PaintTools.EllipseTool ellipseTool = new PaintTools.EllipseTool();
 
-
-
     @FXML
     private Canvas canvas;
 
     @FXML
-    private ColorPicker colorPicker;
+    private ColorPicker brushColorPicker;
+    @FXML
+    private ColorPicker rectangleColorPicker;
+    @FXML
+    private ColorPicker ellipseColorPicker;
 
     @FXML
     private Slider sizeSlider;
 
+    @FXML
+    private CheckBox rectangleFilled;
+    @FXML
+    private CheckBox ellipseFilled;
+
+    CheckBox isFilled;
     GraphicsContext GCTool;
 
-    // temporary choose this as main tool
+    // start with brush
     private PaintTool selectedTool = brushTool;
+    private ColorPicker colorPicker = brushColorPicker;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -120,6 +130,23 @@ public class Controller implements Initializable {
         } catch (Exception ex) {
             System.out.printf("Error %s occurred", ex);
         }
+    }
+
+    public void onBrushButtonClicked(){
+        selectedTool = brushTool;
+        colorPicker = brushColorPicker;
+    }
+
+    public void onRectangleButtonClicked(){
+        selectedTool = rectangleTool;
+        colorPicker = rectangleColorPicker;
+        isFilled = rectangleFilled;
+    }
+
+    public void onEllipseButtonClicked(){
+        selectedTool = ellipseTool;
+        colorPicker = ellipseColorPicker;
+        isFilled = ellipseFilled;
     }
 
     ColorPicker getColorPicker() {
