@@ -16,14 +16,14 @@ class PaintTools {
         public void onMousePressed(MouseEvent event, Controller controller) {
             controller.GCTool.beginPath();
             controller.GCTool.moveTo(event.getX(), event.getY());
-            controller.GCTool.setStroke(controller.getColorPicker().getValue());
+            controller.GCTool.setStroke(controller.colorPicker.getValue());
+            controller.GCTool.setLineWidth(controller.toolSize.getValue());
             controller.GCTool.stroke();
         }
 
         @Override
         public void onMouseDragged(MouseEvent event, Controller controller) {
             controller.GCTool.lineTo(event.getX(), event.getY());
-            controller.GCTool.setStroke(controller.getColorPicker().getValue());
             controller.GCTool.stroke();
         }
 
@@ -64,10 +64,11 @@ class PaintTools {
             height = Math.abs(y_start - y_finish);
 
             if (controller.isFilled.isSelected()) {
-                controller.GCTool.setFill(controller.getColorPicker().getValue());
+                controller.GCTool.setFill(controller.colorPicker.getValue());
                 controller.GCTool.fillRect(x, y, width, height);
             } else {
-                controller.GCTool.setStroke(controller.getColorPicker().getValue());
+                controller.GCTool.setLineWidth(controller.toolSize.getValue());
+                controller.GCTool.setStroke(controller.colorPicker.getValue());
                 controller.GCTool.strokeRect(x, y, width, height);
             }
 
@@ -103,10 +104,11 @@ class PaintTools {
             width = Math.abs(x_start - x_finish);
             height = Math.abs(y_start - y_finish);
             if (controller.isFilled.isSelected()) {
-                controller.GCTool.setFill(controller.getColorPicker().getValue());
+                controller.GCTool.setFill(controller.colorPicker.getValue());
                 controller.GCTool.fillOval(x, y, width, height);
             } else {
-                controller.GCTool.setStroke(controller.getColorPicker().getValue());
+                controller.GCTool.setLineWidth(controller.toolSize.getValue());
+                controller.GCTool.setStroke(controller.colorPicker.getValue());
                 controller.GCTool.strokeOval(x, y, width, height);
             }
         }

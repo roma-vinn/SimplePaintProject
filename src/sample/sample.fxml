@@ -10,8 +10,10 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import java.lang.Integer?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
@@ -35,17 +37,23 @@
       <Separator prefWidth="200.0" />
       <HBox alignment="TOP_CENTER" minWidth="-Infinity" spacing="5.0" VBox.vgrow="SOMETIMES">
          <children>
+             <fx:define>
+                 <Integer fx:id="min" fx:value="1"/>
+                 <Integer fx:id="max" fx:value="20"/>
+             </fx:define>
             <Button mnemonicParsing="false" onAction="#onBrushButtonClicked" text="Brush" />
             <ColorPicker fx:id="brushColorPicker" />
-            <Slider fx:id="sizeSlider" min="1.0" minorTickCount="5" showTickMarks="true" value="1.0" />
+            <Spinner fx:id="brushSize" cacheHint="SPEED" editable="true" prefWidth="60.0" min="$min" max="$max" initialValue="5" />
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <Button mnemonicParsing="false" onAction="#onRectangleButtonClicked" text="Rectangle" />
             <ColorPicker fx:id="rectangleColorPicker" />
-            <CheckBox fx:id="rectangleFilled" mnemonicParsing="false" text="Filled" />
+            <CheckBox fx:id="rectangleFilled" mnemonicParsing="false" prefHeight="27.0" text="Filled" />
+            <Spinner fx:id="rectangleSize" cacheHint="SPEED" editable="true" prefWidth="60.0" min="$min" max="$max" initialValue="5" />
             <Separator orientation="VERTICAL" prefHeight="200.0" />
             <Button mnemonicParsing="false" onAction="#onEllipseButtonClicked" text="Ellipse" />
             <ColorPicker fx:id="ellipseColorPicker" />
-            <CheckBox fx:id="ellipseFilled" mnemonicParsing="false" text="Filled" />
+            <CheckBox fx:id="ellipseFilled" mnemonicParsing="false" prefHeight="27.0" text="Filled" />
+            <Spinner fx:id="ellipseSize" cacheHint="SPEED" editable="true" prefWidth="60.0" min="$min" max="$max" initialValue="5" />
          </children>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
