@@ -5,8 +5,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
-
 
 public class Main extends Application {
 
@@ -21,7 +19,10 @@ public class Main extends Application {
         window.setTitle("Simple Paint");
         window.setScene(new Scene(root, SCENE_WIDTH, SCENE_HEIGHT));
         window.setResizable(false);
-//        window.setOnCloseRequest(event -> );
+        window.setOnCloseRequest(event -> {
+            event.consume();
+            new Controller().onCloseButtonClicked();
+        });
         window.show();
     }
 
