@@ -128,6 +128,22 @@ public class Controller implements Initializable {
         }
     }
 
+    /**
+     * Callback upon close button click
+     *
+     * Close the window
+     */
+    public void onCloseButtonClicked(){
+        int result = ConfirmBox.display("Closing confirmation", "Save before closing?");
+        if (result == 1) {
+            onSaveButtonClicked();
+            Main.window.close();
+        } else if (result == 0) {
+            Main.window.close();
+        }
+    }
+
+
     public void onBrushButtonClicked(){
         selectedTool = brushTool;
         colorPicker = brushColorPicker;

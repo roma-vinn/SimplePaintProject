@@ -9,7 +9,6 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -23,7 +22,7 @@
             <items>
               <MenuItem mnemonicParsing="false" onAction="#onOpenButtonClicked" text="Open" />
                   <MenuItem mnemonicParsing="false" onAction="#onSaveButtonClicked" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Close" />
+                  <MenuItem mnemonicParsing="false" onAction="#onCloseButtonClicked" text="Close" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">
@@ -39,7 +38,7 @@
          <children>
              <fx:define>
                  <Integer fx:id="min" fx:value="1"/>
-                 <Integer fx:id="max" fx:value="35"/>
+                 <Integer fx:id="max" fx:value="20"/>
              </fx:define>
             <Button mnemonicParsing="false" onAction="#onBrushButtonClicked" text="Brush" />
             <ColorPicker fx:id="brushColorPicker" />
