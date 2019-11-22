@@ -6,9 +6,17 @@ import javafx.scene.layout.*;
 import javafx.scene.control.*;
 import javafx.geometry.*;
 
+/**
+ * Confirmation box for saving picture
+ */
 class ConfirmBox {
 
-    //Create variable
+    /**
+     * Container for answer
+     *  1 - save
+     *  0 - don`t save
+     *  -1 - cancel
+     */
     private static int answer;
 
     static int display(String title, String message) {
@@ -21,12 +29,12 @@ class ConfirmBox {
         Label label = new Label();
         label.setText(message);
 
-        //Create two buttons
+        // create three buttons
         Button saveButton = new Button("Save");
         Button noSaveButton = new Button("Don`t save");
         Button cancelButton = new Button("Cancel");
 
-        //Clicking will set answer and close window
+        // clicking will set answer and close window
         saveButton.setOnAction(e -> {
             answer = 1;
             window.close();
@@ -43,7 +51,7 @@ class ConfirmBox {
         VBox vBox = new VBox(10);
         HBox hBox = new HBox(10);
 
-        //Add buttons
+        // add buttons
         hBox.getChildren().addAll(cancelButton, noSaveButton, saveButton);
         hBox.setAlignment(Pos.CENTER);
         vBox.getChildren().addAll(label, hBox);
@@ -52,7 +60,7 @@ class ConfirmBox {
         window.setScene(scene);
         window.showAndWait();
 
-        //Make sure to return answer
+        // return answer
         return answer;
     }
 
